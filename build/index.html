@@ -1,0 +1,487 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        
+        
+        <title>Front - end</title>
+    </head>
+    <body>
+        <h1>Робота з GitHub</h1>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+        var Theme_number = 1;
+        var Default_theme = 1;
+        var Ext = "less";
+        //var Ext = "css";
+    
+        function getUrl(num) {
+            return Ext + "/" + Ext + ".style" + num + ".css";
+        }
+    
+        function getThemeNumber() {
+            Theme_number = Theme_number % 2 === 0 ? 1 : 2;
+            console.log(Theme_number);
+            return Theme_number;
+        }
+    
+        function initialize() {
+            var link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", getUrl(Default_theme));
+            link.setAttribute("class", "changeable");
+            document.head.appendChild(link);
+        }
+    
+        function initListener() {
+            document
+                .querySelector(".mynav__theme")
+                .addEventListener("click", changeTheme);
+        }
+    
+        function changeTheme() {
+            document.head
+                .querySelector(".changeable")
+                .setAttribute("href", getUrl(getThemeNumber()));
+        }
+    
+        initialize();
+    
+        window.addEventListener("load", initListener);
+    </script>
+
+    <script src="js/script.js"></script>
+
+
+  </body>
+</html>
+<header>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/robot.png" width="30" height="30">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav  mr-auto">
+					<li class="nav-item">
+						<a class="nav-link text-light" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная♦</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab" aria-controls="gallery" aria-selected="false">Галерея♦</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" id="testing-tab" data-toggle="tab" href="#testing" role="tab" aria-controls="testing" aria-selected="false">Тестирование♦</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="false">Контакты♦</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" id="less-tab" data-toggle="tab" href="#less" role="tab" aria-controls="less" aria-selected="false">LESS♦</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" id="typescript-tab" data-toggle="tab" href="#typescript" role="tab" aria-controls="typescript" aria-selected="false">TypeScript♦</a>
+					</li>
+				</ul>
+
+				<ul class="nav  ml-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link  text-light" data-toggle="modal" data-target="#exampleModal">Вход</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+    <div class="container">
+            <div class="col col-15 col-sm-15 col-md-15 col-lg-15 col-xl-15">
+
+
+                <div class="tab-content">
+                    <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="single-post">
+                                        <h3 class="post-category">Front end</h3>
+                                        <h2 class="post-title"><a href="#">Bootstrap</a></h2>
+                                        <p>Bootstrap (также известен как Twitter Bootstrap) — свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.
+                                                Bootstrap использует современные наработки в области CSS и HTML, поэтому необходимо быть внимательным при поддержке старых браузеров.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="grid-posts">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="img/robot.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h3 class="post-category">Front end</h3>
+                                                <h5 class="post-title">LESS</h5>
+                                                <p class="card-text">LESS (Leaner Style Sheets, компактная таблица стилей)— это динамический язык стилей, который разработал Alexis Sellier. Он создан под влиянием языка стилей Sass, и, в свою очередь, оказал влияние на его новый синтаксис «SCSS», в котором также использован синтаксис, являющийся расширением СSS.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="img/robot.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h3 class="post-category">Back end</h3>
+                                                <h5 class="post-title">C++</h5>
+                                                <p class="card-text">C++ (читается си-плюс-плюс) — компилируемый, статически типизированный язык программирования общего назначения. Поддерживает такие парадигмы программирования, как процедурное программирование, объектно-ориентированное программирование, обобщённое программирование. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="img/robot.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h3 class="post-category">Back end</h3>
+                                                <h5 class="post-title">C#</h5>
+                                                <p class="card-text">C# (произносится си шарп) — объектно-ориентированный язык программирования. Разработан в 1998—2001 годах группой инженеров компании Microsoft под руководством Андерса Хейлсберга и Скотта Вильтаумота как язык разработки приложений для платформы Microsoft .NET Framework.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="img/robot.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h3 class="post-category">Front end</h3>
+                                                <h5 class="post-title">CSS</h5>
+                                                <p class="card-text">CSS — формальный язык описания внешнего вида документа, написанного с использованием языка разметки. Преимущественно используется как средство описания, оформления внешнего вида веб-страниц, написанных с помощью языков разметки HTML и XHTML, но может также применяться к любым XML-документам, например, к SVG или XUL.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col text-center after-posts">
+                                        <button type="button" class="btn btn-outline-secondary Load-more">
+                                            Load more
+                                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/earpods.jpg" alt="Первый слайд">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/laptop.jpg" alt="Второй слайд">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/mouse.jpg" alt="Третий слайд">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+
+                        <div class="container page-top">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                    <a href="img/earpods.jpg" class="fancybox" rel="ligthbox">
+                                        <img  src="img/earpods.jpg" class="zoom img-fluid "  alt="">
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                    <a href="img/laptop.jpg"  class="fancybox" rel="ligthbox">
+                                        <img  src="img/laptop.jpg" class="zoom img-fluid"  alt="">
+                                    </a>
+                                </div>
+                        
+                                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                    <a href="img/mouse.jpg" class="fancybox" rel="ligthbox">
+                                        <img  src="img/mouse.jpg" class="zoom img-fluid "  alt="">
+                                    </a>
+                                </div>
+                        
+                                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                    <a href="img/lightbulb.jpg" class="fancybox" rel="ligthbox">
+                                        <img  src="img/lightbulb.jpg" class="zoom img-fluid "  alt="">
+                                    </a>
+                                </div>
+                        
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="testing" role="panel" aria-labelledby="testing-tab">
+                        <div class="d-grid gap-3">
+                            <div class="container-fluid">
+                                <div class="row jumbotron">
+                                    <div class="col-xs-1  col-lg-4 col-xl-6">
+                                        <div class="bg-danger">
+                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus, odio aliquam quaerat harum nesciunt enim et, dignissimos alias ea commodi aut non itaque nam in at provident ratione assumenda. ipsum dolor sit amet consectetur adipisicing elit. Voluptas eos architecto sapiente dolore earum magni similique autem, illo doloribus at ipsam eveniet eum, obcaecati porro aspernatur voluptate vitae totam voluptatibus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1  col-lg-6 col-xl-4">
+                                        <div class="bg-warning">
+                                        <p class="text-deeppink text-lowercase" align="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, iste. Itaque officiis non eius, numquam saepe illum? Dolorum possimus nam libero eum, placeat maiores repudiandae optio minima harum dolores ab? ipsum dolor sit amet consectetur adipisicing elit. Voluptas eos architecto sapiente dolore earum magni similique autem, illo doloribus at ipsam eveniet eum, obcaecati porro aspernatur voluptate vitae totam voluptatibus.</p>
+                                        </div>
+                                    </div>
+                                        <table class="table table-dark table-center text-center text-success">
+                                            <thead>
+                                                <em>
+                                                    <div class="table text-success">
+                                                        <h2>Таблица тестовая
+                                                            <i class="fas fa-bold"></i>
+                                                        </h2>
+                                                    </div> 
+                                                </em>
+                                                <tr>
+                                                    <td>First</td>
+                                                    <td>Second</td>
+                                                    <td>Third</td>
+                                        
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                        <form>
+                            <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                            <label for="textarea">Текст</label>
+                            <textarea class="form-control" id="textarea" rows="4"></textarea>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="submit" class="btn btn-secondary">Директорові</button>
+                                <button type="submit" class="btn btn-secondary">Менеджеру</button>
+                                <button type="submit" class="btn btn-secondary">Відділ реклами</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="less" role="tabpanel" aria-labelledby="less-tab">
+                        <div class="wrapper">
+                            <nav class="mynav">
+                                <button class="mynav__theme">Change theme</button>
+                                <ul class="mynav__menu">
+                                    <li class="mynav__item"><a href="#" class="mynav__link">Home</a></li>
+                                    <li class="mynav__item"><a href="#" class="mynav__link">About</a></li>
+                                    <li class="mynav__item"><a href="#" class="mynav__link">Items</a></li>
+                                    <li class="mynav__item"><a href="#" class="mynav__link">Contact</a></li>
+                                </ul>
+                            </nav>
+                                        
+                            <section class="main">
+                                <div class="main__content">
+                                    <div class="main__tile--danger">
+                                        <div class="main__header">Product 1</div>
+                                        <ul class="main__features">
+                                            <li class="main__item">Feature 1<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 2<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 3<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 4</li>
+                                            <li class="main__item">Feature 5</li>
+                                        </ul>
+                                                        
+                                        <div class="main__footer">
+                                            <button class="main__button main__button--danger">Click on me!</button>
+                                        </div>
+                                    </div>
+                                                    
+                                    <div class="main__tile main__tile--warning">
+                                        <div class="main__header">Product 2</div>
+                                        <ul class="main__features">
+                                            <li class="main__item">Feature 1<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 2</li>
+                                            <li class="main__item">Feature 3<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 4<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 5</li>
+                                        </ul>
+                                                        
+                                        <div class="main__footer">
+                                            <button class="main__button main__button--warning">Click on me!</button>
+                                        </div>
+                                    </div>
+                                                    
+                                    <div class="main__tile main__tile--primary">
+                                        <div class="main__header">Product 3</div>
+                                        <ul class="main__features">
+                                            <li class="main__item">Feature 1</li>
+                                            <li class="main__item">Feature 2<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 3<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 4<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 5</li>
+                                        </ul>
+                                                        
+                                        <div class="main__footer">
+                                            <button class="main__button main__button--primary">Click on me!</button>
+                                        </div>
+                                    </div>
+                                                    
+                                    <div class="main__tile main__tile--success">
+                                        <div class="main__header">Product 4</div>
+                                        <ul class="main__features">
+                                            <li class="main__item">Feature 1<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 2</li>
+                                            <li class="main__item">Feature 3</li>
+                                            <li class="main__item">Feature 4<span class="main__plus">+</span></li>
+                                            <li class="main__item">Feature 5<span class="main__plus">+</span></li>
+                                        </ul>
+                                                        
+                                        <div class="main__footer">
+                                            <button class="main__button main__button--success">Click on me!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        
+                    </div>
+                    <div class="tab-pane active" id="typescript" role="tabpanel" aria-labelledby="typescript-tab">
+                        <div class="container">
+                            <div class="row py-2">
+                                <div class="col-md-4 col-lg-3 col-xl-2 border bg-light">
+                                    <h4 class="p-1">Фильтры:</h4>
+                                    <div id="myTools">
+                                    </div>
+                                    <h4>Корзина:</h4>
+                                    <p id="myBasket">В данный момент в корзина пустая</p>
+                                </div>
+                                <div class="col-md-8 col-lg-9 col-xl-10 border">
+                                    <h4 class="text-center p-1">Каталог товаров:</h4>
+                                    <div class="container">
+                                        <div class="row" id = "rowts">				
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title m-1" id="exampleModalLabel">Авторизация на сайте</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <form>
+                                            <div class="form-froup">
+                                                <label for="exampleInputEmail">E-mail адрес:</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail" aria-describdby="emailHelp" placeholder="Email" required>
+                                                <small id="emailHelp" class="form-text text-muted">Введите ваш e-mail</small>
+                                            </div>
+                                            <div class="form-froup">
+                                                <label for="exampleInputPass">Пароль:</label>
+                                                <input type="password" class="form-control" id="exampleInputpass" aria-describdby="passHelp" placeholder="Password" required>
+                                                <small id="passHelp" class="form-text text-muted">Пароль должен содержать минимум 8 символов</small>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label py-2">
+                                                    <input type="checkbox" class="form-check-input">Запомнить меня</input>
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Отправить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModal" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title  m-1" id="exampleModalLabel">Купить этот товар?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden = "true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <p id="inStockCount">В наличии: </p>
+                                        <form>
+                                            <label for="inputquantity">Сколько нужно?</label>
+                                            <input type="text" class="form-control" id="inputquantity" placeholder="Целые числа" value="1">
+                                            <small id="modlalMessag" class="form-text text-muted"></small>
+                                            <button type="button" id="modlalBtn" class="btn btn-primary my-3" value="1" onclick=myByBtn(this.value)>Отправить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                    <div class="container">
+                        <div class="d-sm-flex justify-content-between">
+                            <div class="footer-left">
+                                <p>Тестовий сайт 2019 год</p>
+                            </div>
+                            <div class="footer-right">
+                                <span>Follow</span>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="./dist/script.js"></script>
+    
+</header>

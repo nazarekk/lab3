@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es2015",
+      "experimentalDecorators": true,
+      "removeComments": true,
+      "outDir": "../dist/js",
+      "sourceMap": true,
+      "outFile": "../dist/script.js",
+      "moduleResolution": "node"
+
+    },
+    "compileOnSave": true 
+  }
+  
